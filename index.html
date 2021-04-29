@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="mensagemCodificada.css">
+
+    <title>Codificador de Mensagem</title>
+</head>
+<body class="conteudo">
+
+    <main class="container-principal">
+
+        <section class="info-codigo" id="infoCodigo">
+            <h1 class="titulo">Codificador de Mensagens</h1>
+            <p class="texto">
+                Alan Turing (1912-1954) foi um matemático britânico, pioneiro da computação e <br><br>
+                considerado o pai da ciência computacional e da inteligência artificial. <br><br>
+                Entre 1940 e 1941, foi o responsável por desenvolver uma máquina capaz de decifrar <br><br>
+                o “Enigma”, código utilizado pelos nazistas, durante a Segunda Guerra Mundial. <br><br>
+                Nesse site teremos a oportunidade de codificar e decodificar um texto utilizando dois tipos <br><br>
+                de código, "Cifra de Cesar" no qual cada letra do texto é substituída por outra, um número fixo de vezes. <br><br>
+                em uma troca de três posições, A seria substituído por D, B se tornaria E, e assim por diante. <br><br>   
+                Os esquemas de codificação Base64 são comumente usados ​​quando há necessidade de codificar dados <br><br>
+                binários que precisam ser armazenados e transferidos por meio de mídia projetada para lidar com ASCII. <br><br>
+                Isso é para garantir que os dados permaneçam intactos sem modificação durante o transporte. <br><br>
+                Clique no botão e codifique sua mensagem. <br><br>
+            </p>
+            <button id="btnInicio" class="btn-inicio">Clique Aqui</button>
+            
+        </section>
+        
+        <section class="invisivel" id="formulario">
+            
+           <form class="forms">
+            
+                <div class="msg-entrada">
+                    <label for="Mensagem">Mensagem:</label> 
+                    <textarea rows="3" placeholder="Insira aqui a mensagem a ser codificada" class="msg-codifica" id="msgCodifica"></textarea>
+                </div>  
+                
+                <div class="opt-codigos">
+                    <label>Escolha o tipo de codificação</label> 
+                    <select name="campoSeleciona" id="campoSeleciona">
+                        <option value="selectionValue">Selecione</option>
+                        <option value="codCesar" id="optCodCesar">Cifra de Cesar</option>
+                        <option value="base64" id="optBase64">Base 64</option>
+                    </select>
+                </div>
+
+                <div class="incremento-invisivel" id="incrementoInvisivel">
+                    <input type="number" placeholder="Incremento" id="incrementoCesar" >
+                </div>
+
+                
+                    
+                <div class="opt-cod-decod" id="codificaOuDecodifica">
+
+                    <input type="radio" value="entradaCodificar" id="inputCodificar">Codificar 
+                    <input type="radio" value="entradaDecodificar" id="inputDecoficar">Decodificar
+                    
+                </div>
+
+               
+
+                <div class="btn-codifica">
+                    <button type="submit" id="codificarMsg" class="codifica-invisivel">Codificar Mensagem</button>
+                    <button type="submit" id="decodificarMsg" class="decodifica-invisivel">Decodificar Mensagem</button>
+                </div>
+
+                <div>
+                    <p class="recebe-resposta">Resposta:</p>
+                    <pi d="recebeResposta"></p>
+                    
+                </div>
+           
+           </form>
+        </section>
+       
+    </main>
+
+    
+    <script src="mensagemCodificada.js"></script>
+</body>
+</html>
