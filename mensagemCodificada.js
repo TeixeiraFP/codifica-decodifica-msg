@@ -1,18 +1,10 @@
 //variáveis
-var botaoInicio = document.querySelector(`#btnInicio`) //usando
-var botaoSelect = document.querySelector(`#campoSeleciona`) //usando
-
-// var cesarSelect = document.querySelector(`#optCodCesar`)
-// var base64Select = document.querySelector(`#optBase64`)
-// var inputIncremento = document.querySelector(`#incrementoInvisivel`)
-
-var codificar = document.querySelector(`#inputCodificar`) //usando
-var decodificar = document.querySelector(`#inputDecoficar`)//usando
-var submitCod = document.querySelector(`#codificarMsg`)// usando
-var submitDecod = document.querySelector(`#decodificarMsg`)// usando
-
-var escolha = document.querySelector(`#codificaOuDecodifica`)
-
+var botaoInicio = document.querySelector(`#btnInicio`) 
+var botaoSelect = document.querySelector(`#campoSeleciona`) 
+var codificar = document.querySelector(`#inputCodificar`) 
+var decodificar = document.querySelector(`#inputDecoficar`)
+var submitCod = document.querySelector(`#codificarMsg`)
+var submitDecod = document.querySelector(`#decodificarMsg`)
 var resposta = document.querySelector(`#recebeResposta`)
 
 //eventos
@@ -27,7 +19,6 @@ botaoSelect.addEventListener(`change`, function(event){
     if (botaoSelect.value === "codCesar"){
         incrementoInvisivel.classList.remove(`incremento-invisivel`)
     }
-
     else if(botaoSelect.value === "base64"){
         incrementoInvisivel.classList.add(`incremento-invisivel`)
     }
@@ -37,11 +28,9 @@ codificar.addEventListener(`click`, function(event){
     codificarMsg.classList.remove(`codifica-invisivel`)
     decodificarMsg.classList.add(`decodifica-invisivel`)
 })
-
 decodificar.addEventListener(`click`,function(event){
     decodificarMsg.classList.remove(`decodifica-invisivel`)
     codificarMsg.classList.add(`codifica-invisivel`)
-
 })
 //evento que faz com que as funçoes aconteçam
 submitCod.addEventListener(`click`, function(event){
@@ -51,8 +40,7 @@ submitCod.addEventListener(`click`, function(event){
     }
     if (botaoSelect.value === "base64"){
         var codificandoMsg = btoa(msgCodifica.value)
-        console.log(codificandoMsg)
-        codificandoMsg.innerHTML = resposta 
+        resposta.value = `${codificandoMsg}`
     }
 })
 submitDecod.addEventListener(`click`, function(event){
@@ -62,8 +50,7 @@ submitDecod.addEventListener(`click`, function(event){
     }
     if (botaoSelect.value === "base64"){
         var decodificandoMsg = atob(msgCodifica.value)
-        resposta = decodificandoMsg.innerHTML
-        console.log(decodificandoMsg)
+        resposta.value = `${decodificandoMsg}`
     }
 })
 //funcões
@@ -84,10 +71,13 @@ function codificaCesar(){
     for (var j = 0; j < arrNumVazio.length; j++){
         arrMsgCodVazio.push(String.fromCharCode(arrNumVazio[j]))  
     }
+    
      msgFinal = arrMsgCodVazio.join("")  
+     resposta.value = `${msgFinal}`
      console.log(msgFinal) 
 }
 function decodificaCesar(){
+    
     var incremento = document.querySelector(`#incrementoCesar`).value
     var inc = parseInt(incremento)
     var msgCodifica = document.querySelector(`#msgCodifica`).value
@@ -103,7 +93,9 @@ function decodificaCesar(){
     for (var j = 0; j < arrNumVazio.length; j++){
         arrMsgCodVazio.push(String.fromCharCode(arrNumVazio[j]))         
     }
+    
      msgFinal = arrMsgCodVazio.join("")  
+     resposta.value = `${msgFinal}`
      console.log(msgFinal) 
 }
 
