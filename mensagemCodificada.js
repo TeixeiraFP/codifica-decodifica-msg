@@ -60,6 +60,7 @@ function codificaCesar(){
     var msgCodifica = document.querySelector(`#msgCodifica`).value
     console.log (incremento)
     var mensagemCesar = msgCodifica.split("")
+    console.log(mensagemCesar)
     var arrNumVazio = []
     var arrMsgCodVazio = []
     var msgFinal = ""
