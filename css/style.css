@@ -1,5 +1,5 @@
 .container {
-  background-image: url("imgFundo.jpg");
+  background-image: url("../public/imgFundo.jpg");
   background-attachment: fixed;
   background-size: 100%;
   background-repeat: no-repeat;
