@@ -11,6 +11,7 @@
 }
 .container-main {
   margin-top: 30px;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -65,14 +66,13 @@ header {
   width: 30%;
 }
 
-.invisible {
+/* .invisible {
   display: none;
-  width: 50%;
-}
+  width: 40%;
+} */
 
 .forms {
   font-size: 20px;
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #1f1f1f;
 
   display: flex;
@@ -80,38 +80,68 @@ header {
   align-items: center;
   justify-content: space-around;
 
-  background-color: #d4cbcb;
+  background-color: #8a8a8a;
+  opacity: 95%;
   border: 2px solid black;
-  border-radius: 2em;
+  border-radius: 1em;
 
   width: 400px;
-  height: 400px;
+  min-height: 350px;
 }
 
-.msg-entrada {
+.message {
   display: flex;
   align-items: center;
 }
 
-.msg-codifica {
-  width: 60%;
+.input-message {
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
 }
-
-.opt-cod-decod {
+.selection {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
+.option {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
 
-.incremento-invisivel {
+  font-size: 15px;
+}
+.option-cod {
+  display: flex;
+  align-items: center;
+}
+.option-decod {
+  display: flex;
+  align-items: center;
+}
+.increment-invisible {
+  display: none;
+}
+.btn-cod-decod {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cod-invisible {
   display: none;
 }
 
-.codifica-invisivel {
+.decod-invisible {
   display: none;
 }
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.decodifica-invisivel {
-  display: none;
+  width: 200px;
+}
+.result-infos {
+  width: 100%;
 }
 .footer {
   margin-top: 30px;

@@ -47,18 +47,18 @@
 
       <section class="invisible" id="formulario">
         <form class="forms">
-          <div class="msg-entrada">
-            <label for="Mensagem">Mensagem:</label>
+          <div class="message">
+            <label for="message">Mensagem:</label>
             <textarea
               rows="3"
               placeholder="Insira aqui a mensagem a ser codificada"
-              class="msg-codifica"
+              class="input-message"
               id="msgCodifica"
             ></textarea>
           </div>
 
-          <div class="opt-codigos">
-            <label>Escolha o tipo de codificação</label>
+          <div class="selection">
+            <label>Base64 || Cifra de Cesar</label>
             <select name="campoSeleciona" id="campoSeleciona">
               <option value="selectionValue">Selecione</option>
               <option value="codCesar" id="optCodCesar">Cifra de Cesar</option>
@@ -66,7 +66,7 @@
             </select>
           </div>
 
-          <div class="incremento-invisivel" id="incrementoInvisivel">
+          <div class="increment-invisible" id="incrementoInvisivel">
             <input
               type="number"
               placeholder="Incremento"
@@ -74,37 +74,38 @@
             />
           </div>
 
-          <div class="opt-cod-decod" id="codificaOuDecodifica">
-            <input
-              type="radio"
-              value="entradaCodificar"
-              name="radio"
-              id="inputCodificar"
-            />Codificar
-            <input
-              type="radio"
-              value="entradaDecodificar"
-              name="radio"
-              id="inputDecoficar"
-            />Decodificar
+          <div class="option" id="codificaOuDecodifica">
+            <div class="option-cod">
+              <input
+                type="radio"
+                value="entradaCodificar"
+                name="radio"
+                id="inputCodificar"
+              />Codificar
+            </div>
+
+            <div class="option-decod">
+              <input
+                type="radio"
+                value="entradaDecodificar"
+                name="radio"
+                id="inputDecoficar"
+              />Decodificar
+            </div>
           </div>
 
-          <div class="btn-codifica">
-            <button type="submit" id="codificarMsg" class="codifica-invisivel">
+          <div class="btn-cod-decod">
+            <button type="submit" id="codificarMsg" class="cod-invisible style">
               Codificar Mensagem
             </button>
-            <button
-              type="submit"
-              id="decodificarMsg"
-              class="decodifica-invisivel"
-            >
+            <button type="submit" id="decodificarMsg" class="decod-invisible">
               Decodificar Mensagem
             </button>
           </div>
 
           <div>
-            <p class="recebe-resposta">Resultado:</p>
-            <input type="text" id="recebeResposta" />
+            <p class="result">Resultado:</p>
+            <input type="text" id="recebeResposta" class="result-infos" />
           </div>
         </form>
       </section>
