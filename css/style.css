@@ -66,10 +66,10 @@ header {
   width: 30%;
 }
 
-/* .invisible {
+.invisible {
   display: none;
   width: 40%;
-} */
+}
 
 .forms {
   font-size: 20px;
@@ -126,6 +126,18 @@ header {
   display: flex;
   justify-content: center;
 }
+.btn-cod-decod button {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  color: white;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: #1f1f1f;
+
+  height: 35px;
+  width: 70%;
+}
 .cod-invisible {
   display: none;
 }
@@ -142,6 +154,7 @@ header {
 }
 .result-infos {
   width: 100%;
+  border: 1px solid black;
 }
 .footer {
   margin-top: 30px;
